@@ -1,19 +1,21 @@
 export class RealtimeAPI extends RealtimeEventHandler {
     /**
      * Create a new RealtimeAPI instance
-     * @param {{url?: string, apiKey?: string, dangerouslyAllowAPIKeyInBrowser?: boolean, debug?: boolean}} [settings]
+     * @param {{url?: string, apiKey?: string, dangerouslyAllowAPIKeyInBrowser?: boolean, debug?: boolean, model?: string}} [settings]
      * @returns {RealtimeAPI}
      */
-    constructor({ url, apiKey, dangerouslyAllowAPIKeyInBrowser, debug }?: {
+    constructor({ url, apiKey, dangerouslyAllowAPIKeyInBrowser, debug, model }?: {
         url?: string;
         apiKey?: string;
         dangerouslyAllowAPIKeyInBrowser?: boolean;
         debug?: boolean;
+        model?: string;
     });
     defaultUrl: string;
     url: string;
     apiKey: string;
     debug: boolean;
+    model: string;
     ws: any;
     /**
      * Tells us whether or not the WebSocket is connected

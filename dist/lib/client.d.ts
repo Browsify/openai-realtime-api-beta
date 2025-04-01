@@ -35,6 +35,11 @@
  * @property {"auto"|"none"|"required"|{type:"function",name:string}} [tool_choice]
  * @property {number} [temperature]
  * @property {number|"inf"} [max_response_output_tokens]
+ * @property {InputAudioNoiseReductionType|null} [input_audio_noise_reduction]
+ */
+/**
+ * @typedef {Object} InputAudioNoiseReductionType
+ * @property {"far_field"|"near_field"} type
  */
 /**
  * @typedef {"in_progress"|"completed"|"incomplete"} ItemStatusType
